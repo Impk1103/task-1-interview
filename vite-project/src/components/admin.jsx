@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/admin.css';
 
+
 const AdminDashboard = () => {
   const [submissions, setSubmissions] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       
-        const response = await axios.get(`${import.meta.url.REACT_APP_API_URL}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}`);
         setSubmissions(response.data);
     };
 
