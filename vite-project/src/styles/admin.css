@@ -15,7 +15,7 @@
 
 .user-card {
 
-  border: 1px solid #dbdbdb;
+  border: 1px solid #747373;
   padding: 20px;
   margin: 25px 10px;
   border-radius: 8px;
@@ -37,8 +37,8 @@
 }
 
 .image-item {
-  width: 80px;
-  height: 80px;
+  width: 400px;
+  height: 400px;
   border-radius: 5px;
   border: 1px solid #ccc;
   object-fit: cover;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/userform.css';
 import axios from 'axios';
-
+// const apiUrl = process.env.REACT_APP_API_URL;
 
 
 const UserForm = () => {
@@ -16,7 +16,7 @@ const UserForm = () => {
     formData.append('socialMediaHandle', handle);
     Array.from(images).forEach((image) => formData.append('images', image));
 
-      await axios.post('http://localhost:5000/users', formData, {
+      await axios.post(`${import.meta.url.REACT_APP_API_URL}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setName('');
