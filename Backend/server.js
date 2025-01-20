@@ -9,7 +9,7 @@ const path = require('path');
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'https://task-1-interview-tdy5.vercel.app/', methods: ['GET', 'POST', 'OPTIONS'], credentials: true }));
 app.use(express.json());
 
 
